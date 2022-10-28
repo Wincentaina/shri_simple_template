@@ -3,10 +3,7 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": ["plugin:react/jsx-runtime"],
     "overrides": [
     ],
     "parserOptions": {
@@ -17,5 +14,6 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off"
     }
 }
