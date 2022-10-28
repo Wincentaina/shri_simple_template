@@ -1,29 +1,31 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StatoscopePlugin = require('@statoscope/webpack-plugin').default;
+const webpack = require('webpack');
 
 const config = {
-    devServer: {
-        static: {
-            directory: path.join(__dirname, 'public')
-        },
-        port: 8080,
-        hot: true,
-        open: true,
-        compress: true
-    },
     entry: {
         about: './src/pages/About.js',
         home: './src/pages/Home.js',
+        index: "./src/index.js"
     },
+
     plugins: [
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: "./public/index.html",
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+        }),
         new StatoscopePlugin({
             saveStatsTo: 'stats.json',
             saveReportTo: 'report.html',
             saveOnlyStats: false,
             open: false,
         }),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(process.env)
+        })
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -34,25 +36,15 @@ const config = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: [/node_modules/],
                 loader: 'babel-loader',
-                options: { presets: ['@babel/env','@babel/preset-react'] },
-            },
-            {
-                test: /\.js$/i,
-                use: "babel-loader",
-                exclude: /node_modules/,
-                resolve: {
-                    extensions: ['.js']
-                },
-                sideEffects: false
+                options: { presets: ['@babel/env',["@babel/preset-react", {"runtime": "automatic"}]]},
             },
             {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"]
-            }
-            // @TODO js rule
-            // @TODO css rule
+            },
+
         ],
     },
     optimization: {
@@ -88,9 +80,10 @@ const config = {
     },
     target: "web",
     resolve: {
+        extensions: [".tsx", ".ts", ".js"],
         fallback: {
             'buffer': require.resolve('buffer'),
-            'stream': false,
+            'stream': require.resolve("stream-browserify"),
             'crypto': require.resolve('crypto')
         },
         modules: [
@@ -101,11 +94,7 @@ const config = {
     stats: {
         children: true
     }
-    // @TODO optimizations
-    // @TODO lodash treeshaking
-    // @TODO chunk for lodash
-    // @TODO chunk for runtime
-    // @TODO fallback for crypto
+
 };
 
 module.exports = config;
