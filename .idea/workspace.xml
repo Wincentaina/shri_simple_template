@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4cb40cae-3d2f-4e96-8fe0-0e37d33fb39f" name="Changes" comment="" />
+    <list default="true" id="4cb40cae-3d2f-4e96-8fe0-0e37d33fb39f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/uuid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/uuid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/stats.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2GiCPS74FHYhvGJid1iTmZzgvlo" />
   <component name="ProjectViewState">
@@ -22,10 +46,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.validate">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -36,8 +61,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="validate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="validate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.validate" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -52,7 +88,12 @@
       <updated>1666861993032</updated>
       <workItem from="1666861995047" duration="2059000" />
       <workItem from="1666866745860" duration="27794000" />
-      <workItem from="1666958295156" duration="3277000" />
+      <workItem from="1666958295156" duration="3633000" />
+      <workItem from="1667020532610" duration="4209000" />
+      <workItem from="1667032321064" duration="66000" />
+      <workItem from="1667032425339" duration="487000" />
+      <workItem from="1667032930775" duration="33000" />
+      <workItem from="1667032979374" duration="291000" />
     </task>
     <servers />
   </component>

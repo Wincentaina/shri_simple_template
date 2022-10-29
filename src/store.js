@@ -10,6 +10,7 @@ export const setText = (text) => ({ type: 'SET_TEXT', text });
 export const setDone = (index, done) => ({ type: 'SET_DONE', index, done });
 
 // reducer
+// eslint-disable-next-line default-param-last
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case 'ADD_ITEM':
